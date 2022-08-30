@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crud</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+<body>
+    <nav class="navbar bg-info container-fluid">
+        <div class="mx-auto">
+          <a class="navbar-brand fw-semibold fs-3" href="#">Employee Management</a>
+        </div>
+    </nav>
+    <div class="container-fluid d-flex justify-content-center" style="margin-top: 25px;">
+        <form action="./views/addEmp.html">
+            <button class="btn btn-outline-success me-5 fw-bolder" type="submit">Add Employee</button>
+        </form>
+        <form action="./views/updateEmp.html">
+            <button class="btn btn-outline-success me-5 fw-bolder" type="submit">Update Employee</button>
+        </form>
+        <form action="./views/deleteEmp.html">
+            <button class="btn btn-outline-success me-5 fw-bolder" type="submit">Delete Employee</button>
+        </form>
+    </div>
+    <div class="container text-center">
+        <table class="table table-bordered" style="margin-top: 20px;">
+            <thead class="table-dark border-primary">
+                <tr>
+                    <th>Employee ID</th>
+                    <th>Employee Name</th>
+                    <th>Department ID</th>
+                    <th>Manager ID</th>
+                    <th>Designation</th>
+                    <th>Salary</th>
+                </tr>
+            </thead>
+            <!-- <tbody id="Emptable">
+                <% Employee.forEach(function(emps){ %>
+                    <tr>
+                        <td><%= emps.employeeId %></td>
+                        <td><%= emps.name %></td>
+                        <td><%= emps.departmentId %></td>
+                        <td><%= emps.managerId %></td>
+                        <td><%= emps.designation %></td>
+                        <td><%= emps.salary %></td>
+                    </tr>
+                <% }); %>
+            </tbody> -->
+        </table> 
+    </div>
+    
+<!--     <script>
+        $.get('/', {}, function(result) {
+          let response = '';
+          result.forEach(data => {
+            // employeeId,name,departmentId,managerId,designation,salary
+            response += `<tr>
+                <td>${data.employeeId}</td>
+                <td>${data.name}</td>
+                <td>${data.departmentId}</td>
+                <td>${data.managerId}</td>
+                <td>${data.designation}</td>
+                <td>${data.salary}</td>
+                </tr>`
+          })
+          $('#Emptable').html(response)
+        });
+    </script> -->
+</body>
+</html>
